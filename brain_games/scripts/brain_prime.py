@@ -1,5 +1,8 @@
+
 from brain_games.engine import startengine
+
 from brain_games.constants import ROUNDS_COUNT
+
 import random
 
 
@@ -7,8 +10,7 @@ def isPrime(x):
     if x < 2:
         return False
     length = x / 2
-    lis = [2:length]
-    for i in range(lis):
+    for i in range(2, length):
         if x % i == 0:
             return False
     return True
