@@ -10,10 +10,9 @@ def solving(x, y, operator):
         return x - y
     if operator == '+':
         return x + y
-    else:
-        raise ValueError("Unknown operator: ", operator, "!")
+    raise ValueError("Unknown operator: ", operator, "!")
 
-def playGame():
+def playgame():
     thepoint = 'What is the result of the expression?'
 
     operators = ['*', '-', '+']

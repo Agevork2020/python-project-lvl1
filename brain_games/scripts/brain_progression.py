@@ -13,7 +13,7 @@ def makeQuestion(randLength, randHidden, randFirst, randStep):
     return "{}{}".format(randFirst, result1)
 
 
-def playGame():
+def playgame():
     thepoint = 'What number is missing in the progression?'
 
     questions_answers = []

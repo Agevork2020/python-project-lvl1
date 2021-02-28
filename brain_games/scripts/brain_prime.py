@@ -6,15 +6,15 @@ import random
 def isPrime(x):
     if x < 2:
         return False
-    length = x/2
-    list = [2 : length]
-    for i in range(list):
+    length = x / 2
+    lis = [2:length]
+    for i in range(lis):
         if x % i == 0:
             return False
     return True
 
 
-def playGame():
+def playgame():
     thepoint = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
     questions_answers = []

@@ -8,7 +8,7 @@ def gcd(x, y):
         return math.gcd(y, x)
 
 
-def playGame():
+def playgame():
     thepoint = 'Find the greatest common divisor of given numbers.'
 
     questions_answers = []
