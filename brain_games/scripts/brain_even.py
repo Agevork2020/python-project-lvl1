@@ -1,3 +1,5 @@
+#!/usr/bin/env python3 
+
 from brain_games.engine import startengine
 from brain_games.constants import ROUNDS_COUNT
 import random
@@ -14,4 +16,4 @@ def playgame():
     startengine(thepoint, questions_answers)
 
 if __name__ == '__main__':
-    main()
+    playgame()
