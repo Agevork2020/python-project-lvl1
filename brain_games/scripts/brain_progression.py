@@ -14,7 +14,7 @@ def makeQuestion(randLength, randHidden, randFirst, randStep):
 
 
 def playgame():
-    thepoint = 'What number is missing in the progression?'
+    thepoint = 'What number is missing in the progression??'
 
     questions_answers = []
     for i in range(ROUNDS_COUNT):

@@ -1,7 +1,7 @@
 def startengine(thepoint, questions_answers):
-    print('Welcome to the Brain Game!')
+    print('Welcome to the Brain Game!!')
     name = prompt.string('May I have your name?')
-    print('Hello', name, '!')
+    print('Hello', name, '!!')
     print(thepoint)
     i = 0
     while i < count(questions_answers): 

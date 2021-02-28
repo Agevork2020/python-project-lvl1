@@ -5,7 +5,7 @@ from brain_games.cli import welcome_user
 
 
 def main(): #главная функция
-    print('Welcome to the Brain Games!')
+    print('Welcome to the Brain Games!!')
 
 
 if __name__ == '__main__':

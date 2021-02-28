@@ -13,7 +13,7 @@ def solving(x, y, operator):
     raise ValueError("Unknown operator: ", operator, "!")
 
 def playgame():
-    thepoint = 'What is the result of the expression?'
+    thepoint = 'What is the result of the expression??'
 
     operators = ['*', '-', '+']
     questions_answers = []

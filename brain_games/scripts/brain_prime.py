@@ -17,7 +17,7 @@ def isPrime(x):
 
 
 def playgame():
-    thepoint = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+    thepoint = 'Answer "yes" if given number is prime. Otherwise answer "no"..'
 
     questions_answers = []
     for i in range(ROUNDS_COUNT):

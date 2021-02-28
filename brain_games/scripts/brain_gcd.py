@@ -9,7 +9,7 @@ def gcd(x, y):
 
 
 def playgame():
-    thepoint = 'Find the greatest common divisor of given numbers.'
+    thepoint = 'Find the greatest common divisor of given numbers..'
 
     questions_answers = []
     for i in range(ROUNDS_COUNT):
