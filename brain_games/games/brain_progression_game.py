@@ -17,13 +17,13 @@ def playgame():
     thepoint = 'What number is missing in the progression??'
 
     questions_answers = []
-    for i in range(ROUNDS_COUNT):
+    for i in range(1, ROUNDS_COUNT):
         randLength = random.randint(5, 15)
         randHidden = random.randint(1, randLength - 1)
         randFirst = random.randint(0, 30)
         randStep = random.randint(2, 10)
         question = makeQuestion(randLength, randHidden, randFirst, randStep)
-        rightAnswer = str(randFirst + randStep * randHidden)
-        questions_answers[i] = [question, rightAnswer]
+        right_answer = str(randFirst + randStep * randHidden)
+        questions_answers[i] = [question, right_answer]
 
     startengine(thepoint, questions_answers)
