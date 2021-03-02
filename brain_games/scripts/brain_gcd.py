@@ -20,3 +20,6 @@ def playgame():
         questions_answers[i] = [question, rightAnswer]
 
     startengine(thepoint, questions_answers)
+
+if __name__ == '__main__':
+    playgame()
