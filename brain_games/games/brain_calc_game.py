@@ -18,12 +18,12 @@ def playgame():
 
     operators = ['*', '-', '+']
     questions_answers = []
-    for i in range(1, ROUNDS_COUNT):
+    for i in range(ROUNDS_COUNT):
         x = random.randint(-30, 30)
         y = random.randint(-30, 30)
         operator = random.choice(operators)
         question = "{} {} {}".format(x, operator, y)
         right_answer = str(solving(x, y, operator))
-        questions_answers[i] = [question, right_answer]
+        questions_answers.append([question, right_answer])
 
     startengine(thepoint, questions_answers)
