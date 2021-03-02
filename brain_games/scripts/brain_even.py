@@ -1,21 +1,9 @@
 #!/usr/bin/env python3 
 
-from brain_games.engine import startengine
-from brain_games.constants import ROUNDS_COUNT
-import random
+from brain_games.games.brain_even_game import playgame
 
 def main():
-    pass
+    playgame()
 
 if __name__ == '__main__':
     main()
-
-def playgame():
-    thepoint = 'Answer "yes" if the number is even, otherwise answer "no"..'
-    questions_answers = []
-    for i in range(ROUNDS_COUNT):
-        question = random.randint(-100, 100)
-        rightanswer = 'yes' if question % 2 == 0 else 'no'
-        questions_answers[i] = [question, rightanswer]
-
-    startengine(thepoint, questions_answers)

@@ -1,29 +1,9 @@
-from brain_games.engine import startengine
-from brain_games.constants import ROUNDS_COUNT
-import random
+#!/usr/bin/env python3 
 
+from brain_games.games.brain_progression_game import playgame
 
-def makeQuestion(randLength, randHidden, randFirst, randStep):
-    result1 = ''
-    for i in range(randLength):
-        x = randFirst + randStep * i
-        if i == randHidden:
-            x = "..."
-        result1 .= " {}".format(x)
-    return "{}{}".format(randFirst, result1)
+def main(): 
+    playgame()
 
-
-def playgame():
-    thepoint = 'What number is missing in the progression??'
-
-    questions_answers = []
-    for i in range(ROUNDS_COUNT):
-        randLength = random.randint(5, 15)
-        randHidden = random.randint(1, randLength - 1)
-        randFirst = random.randint(0, 30)
-        randStep = random.randint(2, 10)
-        question = makeQuestion(randLength, randHidden, randFirst, randStep)
-        rightAnswer = str(randFirst + randStep * randHidden)
-        questions_answers[i] = [question, rightAnswer]
-
-    startengine(thepoint, questions_answers)
+if __name__ == '__main__':
+    main()

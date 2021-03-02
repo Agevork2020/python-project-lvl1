@@ -1,28 +1,9 @@
+#!/usr/bin/env python3 
 
-from brain_games.engine import startengine
+from brain_games.games.brain_prime_game import playgame
 
-from brain_games.constants import ROUNDS_COUNT
+def main(): 
+    playgame()
 
-import random
-
-
-def isPrime(x):
-    if x < 2:
-        return False
-    length = x / 2
-    for i in range(2, length):
-        if x % i == 0:
-            return False
-    return True
-
-
-def playgame():
-    thepoint = 'Answer "yes" if given number is prime. Otherwise answer "no"..'
-
-    questions_answers = []
-    for i in range(ROUNDS_COUNT):
-        question = random.randint(0, 100)
-        rightAnswer = 'yes' if isPrime(question) else 'no'
-        questions_answers[i] = [question, rightAnswer]
-
-    startengine(thepoint, questions_answers)
+if __name__ == '__main__':
+    main()
