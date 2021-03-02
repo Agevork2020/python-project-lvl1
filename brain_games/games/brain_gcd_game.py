@@ -16,7 +16,7 @@ def playgame():
         rand1 = random.randint(0, 50)
         rand2 = random.randint(0, 50)
         question = "{} {}".format(rand1, rand2)
-        right_answer = str(gcd(rand1, rand2))
+        right_answer = '{}'.format(gcd(rand1, rand2))
         questions_answers.append([question, right_answer])
 
     startengine(thepoint, questions_answers)

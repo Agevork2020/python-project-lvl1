@@ -6,7 +6,7 @@ import random
 def isPrime(x):
     if x < 2:
         return False
-    length = x / 2
+    length = round(x / 2)
     for i in range(2, length):
         if x % i == 0:
             return False

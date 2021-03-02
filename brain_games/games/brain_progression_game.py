@@ -3,14 +3,14 @@ from brain_games.games.constants import ROUNDS_COUNT
 import random
 
 
-def makeQuestion(randLength, randHidden, randFirst, randStep):
+def make_question(rand_length, rand_hidden, rand_first, rand_step):
     result1 = ''
-    for i in range(randLength):
-        x = randFirst + randStep * i
-        if i == randHidden:
-            x = "..."
-        result1 .= " {}".format(x)
-    return "{}{}".format(randFirst, result1)
+    for i in range(rand_length):
+        x = '{} '.format(rand_first + rand_step * i)
+        if i == rand_hidden:
+            x = "... "
+        result1 += x
+    return str(result1)
 
 
 def playgame():
@@ -18,12 +18,12 @@ def playgame():
 
     questions_answers = []
     for i in range(ROUNDS_COUNT):
-        randLength = random.randint(5, 15)
-        randHidden = random.randint(1, randLength - 1)
-        randFirst = random.randint(0, 30)
-        randStep = random.randint(2, 10)
-        question = makeQuestion(randLength, randHidden, randFirst, randStep)
-        right_answer = str(randFirst + randStep * randHidden)
+        rand_length = random.randint(5, 15)
+        rand_hidden = random.randint(1, rand_length - 1)
+        rand_first = random.randint(0, 30)
+        rand_step = random.randint(2, 10)
+        question = make_question(rand_length, rand_hidden, rand_first, rand_step)
+        right_answer = '{}'.format(rand_first + rand_step * rand_hidden)
         questions_answers.append([question, right_answer])
 
     startengine(thepoint, questions_answers)

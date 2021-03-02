@@ -23,7 +23,7 @@ def playgame():
         y = random.randint(-30, 30)
         operator = random.choice(operators)
         question = "{} {} {}".format(x, operator, y)
-        right_answer = str(solving(x, y, operator))
+        right_answer = '{}'.format(solving(x, y, operator))
         questions_answers.append([question, right_answer])
 
     startengine(thepoint, questions_answers)

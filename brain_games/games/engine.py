@@ -5,15 +5,12 @@ def startengine(thepoint, questions_answers):
     name = prompt.string('May I have your name?')
     print('Hello', name, '!!')
     print(thepoint)
-    i = 0
-    while i < count(questions_answers): 
-        print('Question:', questions_answers[i][0])
-        player_answer = prompt.string('Your answer')
-        if questions_answers[i][1] != player_answer:
-            print(player_answer, "is wrong answer ;(. Correct answer was ", questions_answers[i][1],
-"Let's try again,", name, "!")
+    for question_answer in questions_answers: 
+        print('Question:', question_answer[0])
+        player_answer = prompt.string('Your answer: ')
+        if question_answer[1] != player_answer:
+            print("'{}', 'is wrong answer ;(. Correct answer was '{}'. Let's try again, {}!".format(player_answer, question_answer[1], name))
             return False
-        else:
-            print("Correct!")
-            i += 1
-            print("Congratulations", name, "!")
+        print("Correct!")
+    print("Congratulations", name, "!")
+    return True
