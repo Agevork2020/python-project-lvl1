@@ -1,13 +1,17 @@
+"""An brain_even module."""
+
 import random
+
 from brain_games.games.constants import ROUNDS_COUNT
-from brain_games.games.engine import startengine
+from brain_games.games.engine import start_engine
 
 
-def playgame():
+def play_game():
+    """Run a code."""
     thepoint = 'Answer "yes" if the number is even, otherwise answer "no"..'
     questions_answers = []
-    for num in range(ROUNDS_COUNT):
+    for _ in range(ROUNDS_COUNT):
         question = random.randint(-100, 100)
         right_answer = 'yes' if question % 2 == 0 else 'no'
         questions_answers.append([question, right_answer])
-    startengine(thepoint, questions_answers)
+    start_engine(thepoint, questions_answers)

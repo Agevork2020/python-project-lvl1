@@ -1,3 +1,5 @@
+"""An cli module."""
+
 import prompt
 
 

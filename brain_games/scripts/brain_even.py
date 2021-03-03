@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
+"""An brain_even script."""
 
-from brain_games.games.brain_even_game import playgame
+from brain_games.games.brain_even_game import play_game
 
 
 def main():
-    playgame()
+    """Run a code."""
+    play_game()
 
 
 if __name__ == '__main__':
