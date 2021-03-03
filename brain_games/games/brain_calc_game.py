@@ -3,27 +3,27 @@ from brain_games.games.constants import ROUNDS_COUNT
 import random
 
 
-def solving(x, y, operator):
+def solving(variable1, variable2, operator):
     if operator == '*':
-        return x * y
+        return variable1 * variable2
     if operator == '-':
-        return x - y
+        return variable1 - variable2
     if operator == '+':
-        return x + y
+        return variable1 + variable2
     raise ValueError("Unknown operator: ", operator, "!")
 
 
 def playgame():
     thepoint = 'What is the result of the expression??'
-
+    span_start = -30
+    span_end = 30
     operators = ['*', '-', '+']
     questions_answers = []
-    for i in range(ROUNDS_COUNT):
-        x = random.randint(-30, 30)
-        y = random.randint(-30, 30)
+    for num in range(ROUNDS_COUNT):
+        variable1 = random.randint(span_start, span_end)
+        variable2 = random.randint(span_start, span_end)
         operator = random.choice(operators)
-        question = "{} {} {}".format(x, operator, y)
-        right_answer = '{}'.format(solving(x, y, operator))
+        question = "{} {} {}".format(variable1, operator, variable2)
+        right_answer = '{}'.format(solving(variable1, variable2, operator))
         questions_answers.append([question, right_answer])
-
     startengine(thepoint, questions_answers)
