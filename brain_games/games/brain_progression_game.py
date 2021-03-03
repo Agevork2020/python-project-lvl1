@@ -1,6 +1,6 @@
-from brain_games.games.engine import startengine
-from brain_games.games.constants import ROUNDS_COUNT
 import random
+from brain_games.games.constants import ROUNDS_COUNT
+from brain_games.games.engine import startengine
 
 
 def make_question(rand_length, rand_hidden, rand_first, rand_step):

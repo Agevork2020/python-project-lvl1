@@ -1,7 +1,7 @@
-from brain_games.games.engine import startengine
-from brain_games.games.constants import ROUNDS_COUNT
-import random
 import math
+import random
+from brain_games.games.constants import ROUNDS_COUNT
+from brain_games.games.engine import startengine
 
 
 def gcd(variable1, variable2):
