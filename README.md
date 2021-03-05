@@ -8,10 +8,10 @@ Context: "### Hexlet tests and linter status"
 
 Данный репозиторий содержит код, описывающий логику пяти математических игр. Каждая игра продолжается до трех побед. Условия игры вы сможете прочитать при запуске через введение названия игр в консоли:
 
-- `brain-progression`,
-- `brain-prime`,
-- `brain-gcd`,
-- `brain-even`,
-- `brain-calc`.
+- `make brain-progression`,
+- `make brain-prime`,
+- `make brain-gcd`,
+- `make brain-even`,
+- `make brain-calc`.
 
-Чтобы скачать игру, вам необходимо ввести в консоли _________
+Чтобы скачать игру, вам необходимо ввести в консоли `python3 -m pip install --user agevork1/python-project-lvl1`

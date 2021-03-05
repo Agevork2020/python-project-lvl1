@@ -2,10 +2,8 @@
 
 import prompt
 
-WRONG_MSG = """
-    '{0}', 'is wrong answer ;(. Correct answer was '{1}'.
-    Let's try again, {2}!
-"""
+WR_AN = """'{0}', 'is wrong answer ;(. Correct answer was '{1}'.
+Let's try again, {2}!"""
 
 
 def start_engine(thepoint, questions_answers):
@@ -27,7 +25,7 @@ def start_engine(thepoint, questions_answers):
         print('Question:', question_answer[0])
         player_answer = prompt.string('Your answer: ')
         if question_answer[1] != player_answer:
-            print(WRONG_MSG.format(player_answer, question_answer[1], name))
+            print(WR_AN.format(player_answer, question_answer[1], name))
             return False
         print('Correct!')
     print('Congratulations', name, '!')
