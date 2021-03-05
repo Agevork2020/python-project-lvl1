@@ -13,14 +13,25 @@ SPAN_STEP_START = 2
 SPAN_STEP_END = 10
 
 
-def make_question(rand_length, rand_hidden, rand_first, rand_step):
-    """Run a code."""
+def mk_question(rand_length, rand_hidden, rand_first, rand_step):
+    """
+    Run a code.
+
+    Args:
+        rand_length: length of кщц
+        rand_hidden: index of hidden number
+        rand_first: first number
+        rand_step: step of the progression
+
+    Returns:
+        row
+    """
     result1 = ''
-    for num in range(rand_length):
-        var = '{} '.format(rand_first + rand_step * num)
-        if num == rand_hidden:
-            var = "... "
-        result1 += var
+    for _ in range(rand_length):
+        number = '{0} '.format(rand_first + rand_step * _)
+        if _ == rand_hidden:
+            number = '... '
+        result1 += number
     return str(result1)
 
 
@@ -32,7 +43,7 @@ def play_game():
         rand_hidden = random.randint(1, rand_length - 1)
         rand_first = random.randint(0, SPAN_MAX_START)
         rand_step = random.randint(SPAN_STEP_START, SPAN_STEP_END)
-        question = make_question(rand_length, rand_hidden, rand_first, rand_step)
-        right_answer = '{}'.format(rand_first + rand_step * rand_hidden)
+        question = mk_question(rand_length, rand_hidden, rand_first, rand_step)
+        right_answer = '{0}'.format(rand_first + rand_step * rand_hidden)
         questions_answers.append([question, right_answer])
     start_engine(THEPOINT, questions_answers)

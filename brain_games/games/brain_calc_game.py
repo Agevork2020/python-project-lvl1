@@ -12,14 +12,25 @@ OPERATORS = ('*', '-', '+')
 
 
 def solving(variable1, variable2, operator):
-    """Run a code."""
+    """
+    Run a code.
+
+    Args:
+        variable1: x
+        variable2: y
+        operator: math operator
+
+    Returns:
+        result of operation
+    """
     if operator == '*':
         return variable1 * variable2
     if operator == '-':
         return variable1 - variable2
     if operator == '+':
         return variable1 + variable2
-    raise ValueError("Unknown operator: ", operator, "!")
+    else:
+        print('Unknown operator: ', operator, '!')
 
 
 def play_game():
@@ -29,7 +40,7 @@ def play_game():
         variable1 = random.randint(SPAN_START, SPAN_END)
         variable2 = random.randint(SPAN_START, SPAN_END)
         operator = random.choice(OPERATORS)
-        question = "{} {} {}".format(variable1, operator, variable2)
-        right_answer = '{}'.format(solving(variable1, variable2, operator))
+        question = '{0} {1} {2}'.format(variable1, operator, variable2)
+        right_answer = '{0}'.format(solving(variable1, variable2, operator))
         questions_answers.append([question, right_answer])
     start_engine(THEPOINT, questions_answers)
