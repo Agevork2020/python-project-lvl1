@@ -18,7 +18,7 @@ def start_engine(thepoint, func):
     Returns:
         true or false answer
     """
-    print('Welcome to the Brain Game!!')
+    print('Welcome to the Brain Game!')
     name = prompt.string('May I have your name? ')
     print('Hello, {0}!!'.format(name))
     print(thepoint)
@@ -30,5 +30,5 @@ def start_engine(thepoint, func):
             print(WR_AN.format(player_answer, question_answer[1], name))
             return False
         print('Correct!')
-    print('Congratulations,', name, '!')
+    print('Congratulations, {0}!'.format(name))
     return True

@@ -2,7 +2,7 @@
 
 import random
 
-THEPOINT = 'What is the result of the expression??'
+THEPOINT = 'What is the result of the expression?'
 SPAN_START = -30
 SPAN_END = 30
 OPERATORS = ('*', '-', '+')

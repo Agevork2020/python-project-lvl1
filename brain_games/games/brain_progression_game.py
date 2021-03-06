@@ -2,7 +2,7 @@
 
 import random
 
-THEPOINT = 'What number is missing in the progression??'
+THEPOINT = 'What number is missing in the progression?'
 SPAN_LENGTH_START = 5
 SPAN_LENGTH_END = 15
 SPAN_MAX_START = 30
