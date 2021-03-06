@@ -3,7 +3,7 @@ Context: "### Hexlet tests and linter status"
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
 [![Super-Linter](https://github.com/Agevork2020/python-project-lvl1/workflows/Super-Linter/badge.svg)](https://github.com/Agevork2020/python-project-lvl1/actions)
 
-Видео-инструкция: https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7
+Видео-инструкция: https://asciinema.org/a/tgJm18lMDKU1IAZU9reIObckC
 
 
 Данный репозиторий содержит код, описывающий логику пяти математических игр. Каждая игра продолжается до трех побед. Условия игры вы сможете прочитать при запуске через введение названия игр в консоли:

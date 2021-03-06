@@ -19,8 +19,8 @@ def start_engine(thepoint, func):
         true or false answer
     """
     print('Welcome to the Brain Game!!')
-    name = prompt.string('May I have your name?')
-    print('Hello', name, '!!')
+    name = prompt.string('May I have your name? ')
+    print('Hello, {0}!!'.format(name))
     print(thepoint)
     for _ in range(ROUNDS_COUNT):
         question_answer = func()
