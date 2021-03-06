@@ -2,9 +2,6 @@
 
 import random
 
-from brain_games.games.constants import ROUNDS_COUNT
-from brain_games.games.engine import start_engine
-
 THEPOINT = 'What number is missing in the progression??'
 SPAN_LENGTH_START = 5
 SPAN_LENGTH_END = 15
@@ -36,14 +33,16 @@ def mk_question(rand_length, rand_hidden, rand_first, rand_step):
 
 
 def play_game():
-    """Run a code."""
-    questions_answers = []
-    for _ in range(ROUNDS_COUNT):
-        rand_length = random.randint(SPAN_LENGTH_START, SPAN_LENGTH_END)
-        rand_hidden = random.randint(1, rand_length - 1)
-        rand_first = random.randint(0, SPAN_MAX_START)
-        rand_step = random.randint(SPAN_STEP_START, SPAN_STEP_END)
-        question = mk_question(rand_length, rand_hidden, rand_first, rand_step)
-        right_answer = '{0}'.format(rand_first + rand_step * rand_hidden)
-        questions_answers.append([question, right_answer])
-    start_engine(THEPOINT, questions_answers)
+    """
+    Run a code.
+
+    Returns:
+        couple of question and answer
+    """
+    rand_length = random.randint(SPAN_LENGTH_START, SPAN_LENGTH_END)
+    rand_hidden = random.randint(1, rand_length - 1)
+    rand_first = random.randint(0, SPAN_MAX_START)
+    rand_step = random.randint(SPAN_STEP_START, SPAN_STEP_END)
+    question = mk_question(rand_length, rand_hidden, rand_first, rand_step)
+    right_answer = '{0}'.format(rand_first + rand_step * rand_hidden)
+    return (question, right_answer)
