@@ -27,7 +27,7 @@ def mk_question(rand_length, rand_hidden, rand_first, rand_step):
     for _ in range(rand_length):
         number = '{0} '.format(rand_first + rand_step * _)
         if _ == rand_hidden:
-            number = '... '
+            number = '.. '
         result1 += number
     return str(result1)
 
