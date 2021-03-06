@@ -17,7 +17,7 @@ def is_prime(number):
     """
     if number < 2:
         return False
-    length = round(number / 2)
+    length = round(number / 2) + 1
     for _ in range(2, length):
         if number % _ == 0:
             return False
