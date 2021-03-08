@@ -1,9 +1,8 @@
-"""An cli module."""
+"""A cli module."""
 
 import prompt
 
 
-# cпрашивает имя и здоровается
 def welcome_user():
     """Run a code."""
     print('Welcome to the Brain Games!')

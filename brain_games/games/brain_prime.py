@@ -2,7 +2,7 @@
 
 import random
 
-THEPOINT = 'Answer "yes" if given number is prime. Otherwise answer "no"..'
+RULES = 'Answer "yes" if given number is prime. Otherwise answer "no"..'
 
 
 def is_prime(number):
@@ -18,13 +18,13 @@ def is_prime(number):
     if number < 2:
         return False
     length = round(number / 2) + 1
-    for _ in range(2, length):
-        if number % _ == 0:
+    for num in range(2, length):
+        if number % num == 0:
             return False
     return True
 
 
-def play_game():
+def game_question_answer():
     """
     Run a code.
 
@@ -33,4 +33,4 @@ def play_game():
     """
     question = random.randint(0, 100)
     right_answer = 'yes' if is_prime(question) else 'no'
-    return (question, right_answer)
+    return question, right_answer

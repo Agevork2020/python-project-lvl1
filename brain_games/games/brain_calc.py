@@ -2,7 +2,7 @@
 
 import random
 
-THEPOINT = 'What is the result of the expression?'
+RULES = 'What is the result of the expression?'
 SPAN_START = -30
 SPAN_END = 30
 OPERATORS = ('*', '-', '+')
@@ -30,7 +30,7 @@ def solving(variable1, variable2, operator):
         print('Unknown operator: ', operator, '!')
 
 
-def play_game():
+def game_question_answer():
     """
     Run a code.
 
@@ -42,4 +42,4 @@ def play_game():
     operator = random.choice(OPERATORS)
     question = '{0} {1} {2}'.format(variable1, operator, variable2)
     right_answer = '{0}'.format(solving(variable1, variable2, operator))
-    return (question, right_answer)
+    return question, right_answer

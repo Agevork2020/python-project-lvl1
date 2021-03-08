@@ -2,10 +2,10 @@
 
 import random
 
-THEPOINT = 'Answer "yes" if the number is even, otherwise answer "no"..'
+RULES = 'Answer "yes" if the number is even, otherwise answer "no"..'
 
 
-def play_game():
+def game_question_answer():
     """
     Run a code.
 
@@ -14,4 +14,4 @@ def play_game():
     """
     question = random.randint(-100, 100)
     right_answer = 'yes' if question % 2 == 0 else 'no'
-    return (question, right_answer)
+    return question, right_answer

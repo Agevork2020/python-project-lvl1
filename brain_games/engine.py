@@ -1,19 +1,18 @@
 """An engine module."""
 
 import prompt
-from brain_games.games.constants import ROUNDS_COUNT
 
-WR_AN = """'{0}', 'is wrong answer ;(. Correct answer was '{1}'.
+WRONG_ANSWER = """'{0}', 'is wrong answer ;(. Correct answer was '{1}'.
 Let's try again, {2}!"""
+ROUNDS_COUNT = 3
 
 
-def start_engine(thepoint, func):
+def start_engine(game_module):
     """
     Run a code.
 
     Args:
-        thepoint: question
-        func: return couple of questions and answers
+        game_module: game atributes
 
     Returns:
         true or false answer
@@ -21,14 +20,13 @@ def start_engine(thepoint, func):
     print('Welcome to the Brain Game!')
     name = prompt.string('May I have your name? ')
     print('Hello, {0}!'.format(name))
-    print(thepoint)
+    print(game_module.RULES)
     for _ in range(ROUNDS_COUNT):
-        question_answer = func()
-        print('Question:', question_answer[0])
+        question, answer = game_module.game_question_answer()
+        print('Question:', question)
         player_answer = prompt.string('Your answer: ')
-        if question_answer[1] != player_answer:
-            print(WR_AN.format(player_answer, question_answer[1], name))
+        if answer != player_answer:
+            print(WRONG_ANSWER.format(player_answer, answer, name))
             return False
         print('Correct!')
     print('Congratulations, {0}!'.format(name))
-    return True
