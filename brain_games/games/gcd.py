@@ -1,9 +1,9 @@
-"""An brain_gcd module."""
+"""A gcd module."""
 
 import math
 import random
 
-RULES = 'Find the greatest common divisor of given numbers..'
+RULE = 'Find the greatest common divisor of given numbers..'
 SPAN_START = 0
 SPAN_END = 50
 
@@ -22,7 +22,7 @@ def gcd(variable1, variable2):
     return math.gcd(variable1, variable2)
 
 
-def game_question_answer():
+def generate_question_answer():
     """
     Run a code.
 

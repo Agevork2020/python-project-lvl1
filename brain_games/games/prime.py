@@ -1,8 +1,8 @@
-"""An brain_prime module."""
+"""A prime module."""
 
 import random
 
-RULES = 'Answer "yes" if given number is prime. Otherwise answer "no"..'
+RULE = 'Answer "yes" if given number is prime. Otherwise answer "no"..'
 
 
 def is_prime(number):
@@ -24,7 +24,7 @@ def is_prime(number):
     return True
 
 
-def game_question_answer():
+def generate_question_answer():
     """
     Run a code.
 

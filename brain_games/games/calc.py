@@ -1,14 +1,14 @@
-"""An brain_calc module."""
+"""A calc module."""
 
 import random
 
-RULES = 'What is the result of the expression?'
+RULE = 'What is the result of the expression?'
 SPAN_START = -30
 SPAN_END = 30
 OPERATORS = ('*', '-', '+')
 
 
-def solving(variable1, variable2, operator):
+def solve(variable1, variable2, operator):
     """
     Run a code.
 
@@ -24,13 +24,10 @@ def solving(variable1, variable2, operator):
         return variable1 * variable2
     if operator == '-':
         return variable1 - variable2
-    if operator == '+':
-        return variable1 + variable2
-    else:
-        print('Unknown operator: ', operator, '!')
+    return variable1 + variable2
 
 
-def game_question_answer():
+def generate_question_answer():
     """
     Run a code.
 
@@ -41,5 +38,5 @@ def game_question_answer():
     variable2 = random.randint(SPAN_START, SPAN_END)
     operator = random.choice(OPERATORS)
     question = '{0} {1} {2}'.format(variable1, operator, variable2)
-    right_answer = '{0}'.format(solving(variable1, variable2, operator))
+    right_answer = '{0}'.format(solve(variable1, variable2, operator))
     return question, right_answer

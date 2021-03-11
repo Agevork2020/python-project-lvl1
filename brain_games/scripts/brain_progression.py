@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """An brain_progression script."""
 
-from brain_games.engine import start_engine
-from brain_games.games import brain_progression
+from brain_games.engine import engine
+from brain_games.games import progression
 
 
 def main():
     """Run a code."""
-    start_engine(brain_progression)
+    engine(progression)
 
 
 if __name__ == '__main__':

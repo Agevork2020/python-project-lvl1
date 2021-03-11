@@ -1,11 +1,11 @@
-"""An brain_even module."""
+"""An even module."""
 
 import random
 
-RULES = 'Answer "yes" if the number is even, otherwise answer "no"..'
+RULE = 'Answer "yes" if the number is even, otherwise answer "no"..'
 
 
-def game_question_answer():
+def generate_question_answer():
     """
     Run a code.
 

@@ -1,8 +1,8 @@
-"""An brain_progression module."""
+"""A progression module."""
 
 import random
 
-RULES = 'What number is missing in the progression?'
+RULE = 'What number is missing in the progression?'
 SPAN_LENGTH_START = 7
 SPAN_LENGTH_END = 15
 SPAN_MAX_START = 30
@@ -32,7 +32,7 @@ def make_question(length, hidden, first, step):
     return str(result1)
 
 
-def game_question_answer():
+def generate_question_answer():
     """
     Run a code.
 
@@ -40,9 +40,9 @@ def game_question_answer():
         couple of question and answer
     """
     length = random.randint(SPAN_LENGTH_START, SPAN_LENGTH_END)
-    hidden = random.randint(1, length - 1)
+    hidden_index = random.randint(1, length - 1)
     first = random.randint(0, SPAN_MAX_START)
     step = random.randint(SPAN_STEP_START, SPAN_STEP_END)
-    question = make_question(length, hidden, first, step)
-    right_answer = '{0}'.format(first + step * hidden)
+    question = make_question(length, hidden_index, first, step)
+    right_answer = '{0}'.format(first + step * hidden_index)
     return question, right_answer
