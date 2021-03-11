@@ -21,7 +21,12 @@ def engine(game_logic):
         print('Question:', question)
         player_answer = prompt.string('Your answer: ')
         if answer != player_answer:
-            print("'{0}', 'is wrong answer ;(. Correct answer was '{1}'.\nLet's try again, {2}!".format(player_answer, answer, name))
+            print(
+                "'{0}', 'is wrong answer ;(. Correct answer was '{1}'.".format(
+                    player_answer, answer,
+                ),
+            )
+            print("Let's try again, {0}!".format(name))
             return
         print('Correct!')
     print('Congratulations, {0}!'.format(name))
