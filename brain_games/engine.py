@@ -5,19 +5,19 @@ import prompt
 ROUNDS_COUNT = 3
 
 
-def engine(game_logic):
+def engine(game):
     """
     Run a code.
 
     Args:
-        game_logic: game atributes
+        game: game atributes
     """
     print('Welcome to the Brain Game!')
     name = prompt.string('May I have your name? ')
     print('Hello, {0}!'.format(name))
-    print(game_logic.RULE)
+    print(game.RULE)
     for _ in range(ROUNDS_COUNT):
-        question, answer = game_logic.generate_question_answer()
+        question, answer = game.generate_question_answer()
         print('Question:', question)
         player_answer = prompt.string('Your answer: ')
         if answer != player_answer:
